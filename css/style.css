@@ -9653,3 +9653,25 @@ h6,
   background-size: cover;
 }
 
+/* Reducir altura del carousel */
+#blog-carousel .carousel-item {
+    height: 900px; /* Ajusta este valor (original era ~600px o más) */
+}
+
+#blog-carousel .carousel-item img {
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+
+/* Ajustar contenido para pantallas más pequeñas */
+@media (max-width: 768px) {
+    #blog-carousel .carousel-item {
+        height: 500px; /* Más bajo en móviles */
+    }
+}
+
+@media (max-width: 576px) {
+    #blog-carousel .carousel-item {
+        height: 400px; /* Aún más bajo en móviles pequeños */
+    }
+}
