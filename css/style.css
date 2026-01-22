@@ -9655,23 +9655,61 @@ h6,
 
 /* Reducir altura del carousel */
 #blog-carousel .carousel-item {
-    height: 900px; /* Ajusta este valor (original era ~600px o más) */
+    height: 900px;
 }
 
 #blog-carousel .carousel-item img {
     height: 100%;
-    object-fit: cover; /* Mantiene la proporción de la imagen */
+    object-fit: cover;
 }
 
-/* Ajustar contenido para pantallas más pequeñas */
+/* Ajustar el texto para carousel más pequeño */
+.carousel-caption h1.display-1 {
+    font-size: 7rem !important;
+    margin-bottom: 10px;
+}
+
+.carousel-caption h2 {
+    font-size: 1.8rem !important;
+}
+
+.carousel-caption {
+    padding-top: 80px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    #blog-carousel .carousel-item {
+        height: 450px;
+    }
+    .carousel-caption h1.display-1 {
+        font-size: 3.5rem !important;
+    }
+}
+
 @media (max-width: 768px) {
     #blog-carousel .carousel-item {
-        height: 500px; /* Más bajo en móviles */
+        height: 350px;
+    }
+    .carousel-caption h1.display-1 {
+        font-size: 2.5rem !important;
+    }
+    .carousel-caption h2 {
+        font-size: 1.3rem !important;
+    }
+    .carousel-caption {
+        padding-top: 50px;
     }
 }
 
 @media (max-width: 576px) {
     #blog-carousel .carousel-item {
-        height: 400px; /* Aún más bajo en móviles pequeños */
+        height: 250px;
+    }
+    .carousel-caption h1.display-1 {
+        font-size: 2rem !important;
+    }
+    .carousel-caption h2 {
+        font-size: 1rem !important;
     }
 }
